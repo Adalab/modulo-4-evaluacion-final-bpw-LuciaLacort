@@ -38,6 +38,7 @@ server.get("/allBeasts", async (req, res) => {
         const conn = await connectDB();
         const select = `SELECT * FROM finder INNER JOIN beasts ON finder.finderId = beasts.fkFinder`;
         const [result] = await conn.query(select);
+        await conn.end();
         res.json({ data: result, count: result.length });
     } catch (error) {
         console.error("Error: ", error);
@@ -54,6 +55,7 @@ server.get("/searchBeast/:id", async (req, res) => {
         const select = 'SELECT * FROM finder INNER JOIN beasts ON finder.finderId = beasts.fkFinder WHERE beastId = ?';
         const [result] = await conn.query(select, [beastId]);
         res.json({ data: result[0]});
+        await conn.end();
     } catch (error) {
         console.error("Error:", error);
         res.status(500).send("Error");
@@ -82,11 +84,9 @@ server.post("/addBeast", async (req, res) => {
     } catch (error) {
         console.error("Error:", error);
         res.status(500).send("Error");
-    }finally {
-        conn.end();
     }
+    await conn.end();
 });
-
 
 
 server.put("/updateBeast/:id", async (req, res) => {
@@ -104,6 +104,7 @@ server.put("/updateBeast/:id", async (req, res) => {
         console.error("Error:", error);
         res.status(500).send("Error");
     } 
+
 });
 
 
