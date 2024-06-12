@@ -1,10 +1,10 @@
-#API REST: Animales fantásticos de la saga Harry Potter y sus descubridores.
+# API REST: Animales fantásticos de la saga Harry Potter y sus descubridores.
 
-##DESCRIPCIÓN: 
+## DESCRIPCIÓN: 
 
 Esta API REST permite a los usuarios listar, añadir, buscar por id, modificar y borrar los datos de los animales fantásticos de la saga Harry Potter que se encuentran en una base de datos junto con sus descubridores.
 
-##INSTALACIÓN:
+## INSTALACIÓN:
 1. Clona este repositorio en tu ordenador.
 2. Crea una base de datos ejecutando el contenido del archivo FantasticBeasts.sql que se encuentra en la carpeta "db".
 3. Abre la carpeta del proyecto clonado en Visual Studio Code.
@@ -14,11 +14,11 @@ Esta API REST permite a los usuarios listar, añadir, buscar por id, modificar y
 7. Abre postman para probar a añadir, modificar, buscar, listar y borrar los datos de la base de datos.
 8. Hay console.log estratégicos que te darán información del flujo de datos entre postman y tus endpoint, ¡atenta a la información que aparece en tu terminal!
 
-##PRUEBAS EN POSTMAN: 
+## PRUEBAS EN POSTMAN: 
 
-###Para hacer pruebas, puedes primero insertar algunos animales fantásticos en la base de datos que has creado:
+### Para hacer pruebas, puedes primero insertar algunos animales fantásticos en la base de datos que has creado:
 
-####Ejemplos que puedes usar en Postman para añadir datos:
+#### Ejemplos que puedes usar en Postman para añadir datos:
 
 http://localhost:3000/addBeast
 
@@ -54,9 +54,9 @@ http://localhost:3000/addBeast
     "beastImage": "imagen_Bowtruckle"
 }
 
-###También puedes probar a modificar los datos:
+### También puedes probar a modificar los datos:
 
-####Ejemplos que puedes usar en Postman para modificar datos 
+#### Ejemplos que puedes usar en Postman para modificar datos 
 
 http://localhost:3000/updateBeast/:id
 
@@ -91,17 +91,17 @@ http://localhost:3000/updateBeast/:id
   
 }
 
-###Podrías buscar la lista completa de los animales o solo uno buscando por su id:
+### Podrías buscar la lista completa de los animales o solo uno buscando por su id:
 
 http://localhost:3000/allBeasts
 http://localhost:3000/searchBeast/:id
 
 
-###Y por último puedes eliminar cualquier animal de la base de datos, aunque no su descubridor, ya que este ha podido descubrir también otros animales fantásticos: 
+### Y por último puedes eliminar cualquier animal de la base de datos, aunque no su descubridor, ya que este ha podido descubrir también otros animales fantásticos: 
 
 http://localhost:3000/deleteBeast/:id
 
-##USO:
+## USO:
 Puedes crear un front que te permita llevar a cabo una o varias de las acciones disponibles (renderizar una lista, buscar solo uno, modificar los datos que ya están en la base de datos, añadir nuevos animales o borrarlos usando su id).
 Recuerda que para cada endpoint tu código para front debe tener: 
 1. Inputs para recoger los valores correctos que se inserten desde el front.
