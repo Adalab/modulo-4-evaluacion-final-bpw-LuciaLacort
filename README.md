@@ -21,8 +21,8 @@ Esta API REST permite a los usuarios listar, añadir, buscar por id, modificar y
 #### Ejemplos que puedes usar en Postman para añadir datos:
 
 http://localhost:3000/addBeast
-
 {
+    
     "name": "Luna Lovegood",
     "country": "United Kingdom",
     "finderImage": "imagen_luna",
@@ -34,6 +34,7 @@ http://localhost:3000/addBeast
 
 
 {
+
     "name": "Newt Scamander",
     "country": "United Kingdom",
     "finderImage": "https://static.wikia.nocookie.net/esharrypotter/images/0/0a/AF1_Newton_Scamander_%28perfil%29.png/revision/latest?cb=20171206172859",
@@ -45,6 +46,7 @@ http://localhost:3000/addBeast
 }
 
 {
+
     "name": "Newt Scamander",
     "country": "United Kingdom",
     "finderImage": "imagen_newt",
@@ -61,6 +63,7 @@ http://localhost:3000/addBeast
 http://localhost:3000/updateBeast/:id
 
 {
+
     "name": "Luna Lovegood",
     "country": "United Kingdom",
     "finderImage": "https://images.ctfassets.net/usf1vwtuqyxm/Mam68Vfou2OO6kqEcyW8W/41657e4dbb7d42d2cab591276105bcc1/LunaLovegood_WB_F6_LunaLovegoodInQuibblerSpecsOnHogwartsExpress_Still_080615_Port.jpg?fm=jpg&q=70&w=2560",
@@ -72,6 +75,7 @@ http://localhost:3000/updateBeast/:id
 
 
 {
+
     "name": "Ron Weasly",
     "country": "United Kingdom",
     "finderImage": "https://static.wikia.nocookie.net/esharrypotter/images/5/56/P5_Ron_Weasley_poster.jpg/revision/latest/scale-to-width-down/221?cb=20070718013816",
@@ -81,6 +85,7 @@ http://localhost:3000/updateBeast/:id
     "beastImage": "https://images.ctfassets.net/usf1vwtuqyxm/9qNXyFbQh39aDlAWEnpty/6a437d9f3d4e3145c5c8bb15da0bb94f/bowtruckle_2_1800x1248.png"
 }
 {
+
     "name": "Newt Scamander",
     "country": "United Kingdom",
     "finderImage": "https://static.wikia.nocookie.net/esharrypotter/images/0/0a/AF1_Newton_Scamander_%28perfil%29.png/revision/latest?cb=20171206172859",
@@ -110,15 +115,22 @@ Recuerda que para cada endpoint tu código para front debe tener:
 
 El objeto que debe recogerse en el front es el siguiente: 
 
-{
-  "name": "",
-  "country": "",
-  "finderImage": "",
-  "beastName": "",
-  "category": "",
-  "description": "",
-  "beastImage": ""
-}
+            {
+
+            "name": "",
+
+            "country": "",
+
+            "finderImage": "",
+
+            "beastName": "",
+
+            "category": "",
+
+            "description": "",
+            
+            "beastImage": ""
+            }
 
 Los id de bestia y finder, así como la foreing key son generedos por la base de datos.
 
